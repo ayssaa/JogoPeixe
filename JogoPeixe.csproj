@@ -22,6 +22,11 @@
       <LogicalName>Icon.bmp</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
+  <!-- Copia a pasta Assets (imagens, sons e fonte) para junto do executável.
+       O jogo carrega esses arquivos direto do disco (ver Nucleo/Recursos.cs). -->
+  <ItemGroup>
+    <None Update="Assets\**\*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.6.1" />
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.6.1" />
